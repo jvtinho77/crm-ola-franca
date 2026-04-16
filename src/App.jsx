@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { LayoutDashboard, Home, Target, Users, Megaphone, Mail, Calendar, Settings, Bell, Search, Contact, Sun, Moon, Zap, ChevronRight, LogOut, Lock, ExternalLink } from 'lucide-react';
+import { LayoutDashboard, Home, Target, Users, Megaphone, Mail, Calendar, Settings, Bell, Search, Contact, Sun, Moon, Zap, ChevronRight, LogOut, Lock, ExternalLink, Mountain } from 'lucide-react';
 import logoHabitar from './assets/logo-habitar.png';
 import DashboardPage from './pages/Dashboard';
 import ImoveisPage from './pages/Imoveis';
@@ -148,14 +148,15 @@ export default function App() {
             </div>
           ) : (
             <div style={{ position: 'relative', padding: '0 24px 32px 24px' }}>
-              <div className="sidebar-logo" style={{ padding: 0 }}>
+              <div className="sidebar-logo" style={{ padding: '8px 0', display: 'flex', justifyContent: 'center' }}>
                 <img 
                   src={logoHabitar} 
                   alt="Habitar" 
                   style={{ 
-                    width: '160px', 
-                    objectFit: 'contain', 
-                    filter: theme === 'dark' ? 'invert(1) brightness(2)' : 'none'
+                    width: '120px', 
+                    objectFit: 'contain',
+                    filter: 'grayscale(1) contrast(10) invert(1)',
+                    mixBlendMode: 'lighten'
                   }} 
                 />
               </div>
